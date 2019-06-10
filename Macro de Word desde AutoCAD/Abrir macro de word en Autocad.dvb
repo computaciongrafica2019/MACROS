@@ -1,0 +1,8 @@
+Sub LeerMacro()
+Dim objWord As Word.Application, wdDoc As Word.Document, def As String
+Set objWord = CreateObject("Word.Application")
+
+objWord.Run ("Doc1.docm!Macro1")
+objWord.Visible = True
+
+End Sub

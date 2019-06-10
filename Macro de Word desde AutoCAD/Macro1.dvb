@@ -1,0 +1,8 @@
+Sub Macro1()
+'
+' Macro1 Macro
+'
+'
+    MsgBox ("El libro se abrió"), vbInformation, "AVISO"
+    
+End Sub
