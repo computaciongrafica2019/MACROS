@@ -1,0 +1,178 @@
+Sub MacroExcelPasteles()
+'
+' MacroExcelPasteles Macro
+' Ganancias venta de pasteles para mascotas
+'
+
+'
+    ActiveCell.FormulaR1C1 = "Cantidad"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "Nombre"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "Ingredientes"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "Precio ud"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "Tamaño (cm)"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "Costo"
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = "Clasica"
+    Range("C2").Select
+    ActiveCell.FormulaR1C1 = "Manzana y zanahoria"
+    Range("D2").Select
+    ActiveCell.FormulaR1C1 = "12000"
+    Range("E2").Select
+    ActiveCell.FormulaR1C1 = "17"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = "5000"
+    Range("A3").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("B3").Select
+    ActiveCell.FormulaR1C1 = "Gatuna"
+    Range("C3").Select
+    ActiveCell.FormulaR1C1 = "Manzana y arandanos"
+    Range("D3").Select
+    ActiveCell.FormulaR1C1 = "10000"
+    Range("E3").Select
+    ActiveCell.FormulaR1C1 = "20"
+    Range("F3").Select
+    ActiveCell.FormulaR1C1 = "6000"
+    Range("A4").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("B4").Select
+    ActiveCell.FormulaR1C1 = "Carnes"
+    Range("C4").Select
+    ActiveCell.FormulaR1C1 = "Pate de Pollo"
+    Range("D4").Select
+    ActiveCell.FormulaR1C1 = "15000"
+    Range("E4").Select
+    ActiveCell.FormulaR1C1 = "22"
+    Range("F4").Select
+    ActiveCell.FormulaR1C1 = "8000"
+    Range("A5").Select
+    ActiveCell.FormulaR1C1 = "2"
+    Range("B5").Select
+    ActiveCell.FormulaR1C1 = "Deligato"
+    Range("C5").Select
+    ActiveCell.FormulaR1C1 = "Atun"
+    Range("D5").Select
+    ActiveCell.FormulaR1C1 = "18000"
+    Range("E5").Select
+    ActiveCell.FormulaR1C1 = "17"
+    Range("F5").Select
+    ActiveCell.FormulaR1C1 = "8500"
+    Range("A6").Select
+    ActiveCell.FormulaR1C1 = "1"
+    Range("B6").Select
+    ActiveCell.FormulaR1C1 = "Pudin"
+    Range("C6").Select
+    ActiveCell.FormulaR1C1 = "Banano"
+    Range("D6").Select
+    ActiveCell.FormulaR1C1 = "9000"
+    Range("E6").Select
+    ActiveCell.FormulaR1C1 = "15"
+    Range("F6").Select
+    ActiveCell.FormulaR1C1 = "4500"
+    Range("A8").Select
+    ActiveCell.FormulaR1C1 = "Total"
+    Range("B8").Select
+    ActiveCell.FormulaR1C1 = "=SUM(R[-6]C[-1]:R[-2]C[-1])"
+    Range("C8").Select
+    ActiveCell.FormulaR1C1 = "Ingreso"
+    Range("C9").Select
+    ActiveCell.FormulaR1C1 = "Costos"
+    Range("C10").Select
+    ActiveCell.FormulaR1C1 = "Ganancia"
+    Range("D8").Select
+    ActiveCell.FormulaR1C1 = "64000"
+    Range("D9").Select
+    ActiveCell.FormulaR1C1 = "32000"
+    Range("D10").Select
+    ActiveCell.FormulaR1C1 = "=R[-2]C-R[-1]C"
+    Range("A1:F1,A8,C8:C10").Select
+    Range("C8").Activate
+    Selection.Font.Bold = True
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Range("A2:A6,D2:F6").Select
+    Range("D2").Activate
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Range("C1").Select
+    Columns("C:C").EntireColumn.AutoFit
+    Range("D2:D6,F2:F6,D8:D10").Select
+    Range("D8").Activate
+    Selection.Style = "Currency [0]"
+    Range("D10").Select
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, _
+        Formula1:="=$D$9"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16752384
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13561798
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlLess, _
+        Formula1:="=$D$9"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16383844
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13551615
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlEqual, _
+        Formula1:="=$D$9"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16751204
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 10284031
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+End Sub
