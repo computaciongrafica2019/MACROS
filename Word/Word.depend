@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1560317308 source:c:\users\home\documents\fortran\word\main.cpp
+	<iostream>
+	<time.h>
+	<Windows.h>
+
