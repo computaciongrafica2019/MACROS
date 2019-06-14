@@ -1,0 +1,12 @@
+1. Abrir el archivo "AbrirMacroACADConWord.xlsm".
+2. Entrar al editor de VBA y correr la macro que viene con el documento.
+3. Buscar el archivo "AbrirMacroDeAutoCAD.docm" y darle Abrir.
+4. Escribir el nombre de la macro de word para abrir autocad (La que viene en ese documento se llama "abrirMacroACAD" sin las comillas).
+5. Se abrira word y si abrimos la ventana veremos una caja que pide ingresar la ruta completa del proyecto DVB (La macro de ACAD).
+6. Copiar la ruta y agregarle el nombre del proyecto. Ej.: C:\Users\Estudiante\Desktop\Macros\MiMacroACAD.dvb
+							   |------------- ruta --------------|-- proyecto --|
+7. En la caja que se abrirá, escribir el nombre de la macro de autocad tal cual como está en el archivo DVB (La del archivo DVB adjunto se llama "Macro1").
+8. Si es la primera vez que se abre, aparecera un cuadro de autocad preguntando si es confiable y se desea abrir el archivo. Darle cargar siempre.
+8.1 Si no sale la ventana, verificar minimizando y volviendo a maximizar la ventana de word.
+
+Con esto deberia correr la macro de ACAD, llamandola desde excel.
